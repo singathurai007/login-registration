@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="form-box">
+
+            <h1>Dashboard</h1>
+
+            <h2 id="welcomeMessage">
+                Welcome!
+            </h2>
+
+            <p id="userEmail"></p>
+
+            <button id="logoutButton">
+                Logout
+            </button>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        // Get logged-in user
+        const user = localStorage.getItem("user");
+
+        // If user is not logged in
+        if (!user) {
+
+            window.location.href = "index.html";
+
+        } else {
+
+            // Convert string into JavaScript object
+            const userData = JSON.parse(user);
+
+            document.getElementById("welcomeMessage").textContent =
+                "Welcome, " + userData.name + "!";
+
+            document.getElementById("userEmail").textContent =
+                userData.email;
+        }
+
+
+        // Logout
+        document.getElementById("logoutButton").addEventListener(
+            "click",
+            function () {
+
+                // Remove user from browser
+                localStorage.removeItem("user");
+
+                // Go back to login
+                window.location.href = "index.html";
+            }
+        );
+
+    </script>
+
+</body>
+
+</html>

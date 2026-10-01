@@ -1,0 +1,177 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f1f5f9;
+  color: #1e293b;
+}
+
+/* Login and Register */
+.login-container,
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.login-form,
+.register-form {
+  width: 100%;
+  max-width: 420px;
+  padding: 35px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.login-form h2,
+.register-form h2 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.login-form > p,
+.register-form > p {
+  text-align: center;
+  margin-bottom: 22px;
+  color: #64748b;
+}
+
+.login-form label,
+.register-form label {
+  display: block;
+  margin: 15px 0 8px;
+  font-weight: 600;
+}
+
+.login-form input,
+.register-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+}
+
+.login-form input:focus,
+.register-form input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.12);
+}
+
+/* Password field */
+.password-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper input {
+  padding-right: 45px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Buttons */
+.login-form button[type="submit"],
+.register-form button[type="submit"] {
+  width: 100%;
+  padding: 13px;
+  margin-top: 22px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.login-form button[type="submit"]:hover,
+.register-form button[type="submit"]:hover {
+  background: #1d4ed8;
+}
+
+.login-form button:disabled,
+.register-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Links */
+.login-form a,
+.register-form a {
+  color: #2563eb;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-form a:hover,
+.register-form a:hover {
+  text-decoration: underline;
+}
+
+/* Error message */
+.error-message {
+  color: #dc2626 !important;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+/* Dashboard */
+.dashboard-container {
+  max-width: 700px;
+  margin: 80px auto;
+  padding: 35px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.dashboard-container h1 {
+  margin-bottom: 15px;
+}
+
+.dashboard-container p {
+  margin-bottom: 20px;
+}
+
+.dashboard-container button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  background: #dc2626;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+@media (max-width: 480px) {
+  .login-form,
+  .register-form {
+    padding: 25px 20px;
+  }
+}
